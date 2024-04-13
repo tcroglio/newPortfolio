@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     tabLinks.forEach(link => {
         link.addEventListener("click", function(event) {
-            event.preventDefault(); // Evitar o comportamento padrão de redirecionamento do link
 
             const tabId = this.getAttribute("data-tab");
 
