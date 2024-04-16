@@ -1,21 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html,
 body {
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 
-body {
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgba(136, 136, 136, 1) 50%, rgba(255, 255, 255, 1) 100%);
-}
 
-/* MOBILE (max 750px) */
-@media only screen and (max-width: 750px) {
+/* MOBILE SMALL (- 400px) */
+@media only screen and (max-width: 400px) {
 
     main {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 30px;
+        margin-top: 150px;
     }
 
     .leftCollumn {
@@ -29,18 +30,25 @@ body {
         padding: 20px;
         height: fit-content;
 
-
         .leftCollumContent {
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
 
+
             .profile {
                 img {
+                    position: relative;
+                    margin-top: -110px;
                     border-radius: 20px;
                     width: 200px;
                     height: 200px;
+                    box-shadow: 10px 10px 37px 7px rgba(0, 0, 0, 0.2);
+                }
+
+                h1 {
+                    font-size: 28px;
                 }
 
                 span {
@@ -52,15 +60,16 @@ body {
                 }
 
                 ul {
+                    margin-top: 30px;
                     display: flex;
                     justify-content: center;
                     padding: 0;
-                    gap: 30px;
+                    gap: 35px;
                     list-style: none;
 
                     li {
                         background-color: lightgray;
-                        padding: 5px;
+                        padding: 5px 7px;
                         border-radius: 5px;
                         text-align: center;
 
@@ -69,7 +78,7 @@ body {
                             text-decoration: none;
 
                             i {
-                                font-size: 20px;
+                                font-size: 25px;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
@@ -94,15 +103,16 @@ body {
                 }
 
                 .contactLine {
+                    align-items: center;
                     display: flex;
-                    gap: 10px;
+                    gap: 6px;
 
                     .contactIcon {
                         width: 50px;
                         height: 50px;
                         border-right: 1px solid black;
                         align-content: center;
-                        font-size: 25px;
+                        font-size: 20px;
                     }
 
                     .contactText {
@@ -114,8 +124,8 @@ body {
                         }
 
                         h3 {
+                            font-size: 10px;
                             margin: 0;
-                            font-size: small;
                         }
                     }
                 }
@@ -125,17 +135,15 @@ body {
                 margin-top: 20px;
 
                 button {
-                    width: 150px;
-                    height: 40px;
+                    width: 170px;
+                    height: 55px;
                     border-radius: 10px;
                     background-color: rgb(50, 50, 50);
                     border: none;
                     font-weight: bold;
-
-                    a {
-                        text-decoration: none;
-                        color: white;
-                    }
+                    text-decoration: none;
+                    color: white;
+                    font-size: 14px;
                 }
             }
         }
@@ -242,8 +250,8 @@ body {
                     .botao {
                         text-align: center;
                         justify-content: center;
-                        gap: 10px;
-                        width: 60px;
+                        gap: 6px;
+                        width: 70px;
                         padding: 10px 0;
 
                         p {
@@ -252,7 +260,275 @@ body {
                         }
 
                         i {
+                            font-size: 17px;
+                        }
+                    }
+
+                    .botao:hover {
+                        background-color: black;
+                        color: white;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .alignRight {
+        padding-left: 10px;
+    }
+}
+
+
+/* MOBILE (400px - 750px) */
+@media only screen and (min-width: 400px) and (max-width: 750px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 150px;
+    }
+
+    .leftCollumn {
+        box-sizing: border-box;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        height: fit-content;
+
+        .leftCollumContent {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            .profile {
+                img {
+                    position: relative;
+                    margin-top: -110px;
+                    border-radius: 20px;
+                    width: 200px;
+                    height: 200px;
+                    box-shadow: 10px 10px 37px 7px rgba(0, 0, 0, 0.2);
+                }
+
+                span {
+                    border: 1px solid grey;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                    background-color: lightgrey;
+                    font-weight: bold;
+                }
+
+                ul {
+                    margin-top: 30px;
+                    display: flex;
+                    justify-content: center;
+                    padding: 0;
+                    gap: 35px;
+                    list-style: none;
+
+                    li {
+                        background-color: lightgray;
+                        padding: 5px;
+                        border-radius: 5px;
+                        text-align: center;
+
+                        a {
+                            color: black;
+                            text-decoration: none;
+
+                            i {
+                                font-size: 25px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .contact {
+                background-color: lightgrey;
+                border-radius: 20px;
+                width: 90%;
+                padding: 10px;
+                align-items: center;
+                justify-content: center;
+
+
+                hr {
+                    margin: 2px;
+                }
+
+                .contactLine {
+                    display: flex;
+                    gap: 10px;
+
+                    .contactIcon {
+                        width: 50px;
+                        height: 50px;
+                        border-right: 1px solid black;
+                        align-content: center;
+                        font-size: 25px;
+                    }
+
+                    .contactText {
+                        text-align: left;
+
+                        p {
+                            margin: 0;
+                            margin-bottom: 5px;
+                        }
+
+                        h3 {
+                            margin: 0;
+                            font-size: small;
+                        }
+                    }
+                }
+            }
+
+            .cv {
+                margin-top: 20px;
+
+                button {
+                    width: 170px;
+                    height: 55px;
+                    border-radius: 10px;
+                    background-color: rgb(50, 50, 50);
+                    border: none;
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .centerCollumn {
+        width: 90%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 20px;
+        height: fit-content;
+        margin-bottom: 100px;
+
+        .centerCollumnContent {
+            padding: 20px;
+
+            .about {
+                text-align: justify;
+
+                h1 {
+                    text-align: center;
+                }
+
+                h1,
+                h2 {
+                    font-size: large;
+                    margin: 0;
+                }
+
+                p {
+                    font-size: small;
+                    margin: 0;
+                }
+
+            }
+
+            .whatIDo {
+                .grid {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    grid-row-gap: 10px;
+
+                    .adjust {
+                        background-color: lightgrey;
+                        display: flex;
+                        border-radius: 20px;
+                        padding: 30px;
+                        padding-left: 15px;
+                        gap: 10px;
+
+                        .gridIcon {
+                            text-align: center;
+                            /* border: 1px solid green; */
+                        }
+
+                        .gridText {
+
+                            /* border: 1px solid purple; */
+                            h1 {
+                                margin-top: 0;
+                            }
+
+                            p {
+                                margin: 0;
+                                text-align: justify;
+                                font-size: small;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .rightCollumn {
+        width: 100%;
+        display: flex;
+        background-color: white;
+        position: fixed;
+        justify-content: space-evenly;
+        bottom: 0;
+        height: fit-content;
+        justify-content: center;
+
+        .rightCollumnContent {
+            box-sizing: border-box;
+
+            .buttons {
+                padding: 10px;
+                display: flex;
+                gap: 10px;
+
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    background-color: lightgrey;
+                    border-radius: 10px;
+
+                    .botao {
+                        text-align: center;
+                        justify-content: center;
+                        gap: 6px;
+                        width: 70px;
+                        padding: 10px 0;
+
+                        p {
+                            margin: 0;
                             font-size: 13px;
+                        }
+
+                        i {
+                            font-size: 17px;
                         }
                     }
 
@@ -276,15 +552,20 @@ body {
 /* TABLETS (750px - 1023px) */
 @media only screen and (min-width: 750px) and (max-width: 1023px) {
 
+
+    body {
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgba(136, 136, 136, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    }
+
     main {
         display: flex;
         gap: 15px;
-        margin-top: 40px;
+        margin-top: 150px;
     }
 
     .leftCollumn {
         box-sizing: border-box;
-        width: 30%;
+        width: 50%;
         margin-left: 3%;
         height: fit-content;
         display: flex;
@@ -301,13 +582,16 @@ body {
 
             .profile {
                 img {
+                    position: relative;
+                    margin-top: -110px;
                     border-radius: 20px;
-                    width: 150px;
-                    height: 150px;
+                    width: 180px;
+                    height: 180px;
+                    box-shadow: 10px 10px 37px 7px rgba(0, 0, 0, 0.2);
                 }
 
                 h1 {
-                    font-size: large;
+                    font-size: 25px;
                 }
 
                 span {
@@ -352,6 +636,8 @@ body {
                 background-color: lightgrey;
                 border-radius: 20px;
                 padding: 10px;
+                width: 90%;
+
 
 
                 hr {
@@ -390,17 +676,15 @@ body {
                 margin-top: 20px;
 
                 button {
-                    width: 150px;
-                    height: 40px;
+                    width: 170px;
+                    height: 50px;
                     border-radius: 10px;
                     background-color: rgb(50, 50, 50);
                     border: none;
                     font-weight: bold;
-
-                    a {
-                        text-decoration: none;
-                        color: white;
-                    }
+                    text-decoration: none;
+                    color: white;
+                    font-size: 14px;
                 }
             }
         }
@@ -413,7 +697,7 @@ body {
         flex-direction: column;
         background-color: white;
         border-radius: 20px;
-        margin-bottom: 50px;
+        margin-bottom: 80%;
         height: fit-content;
 
 
@@ -527,7 +811,7 @@ body {
                         text-align: center;
                         justify-content: center;
                         gap: 10px;
-                        width: 60px;
+                        width: 80px;
                         padding: 10px 0;
 
                         p {
@@ -536,7 +820,7 @@ body {
                         }
 
                         i {
-                            font-size: 13px;
+                            font-size: 17px;
                         }
                     }
 
@@ -563,13 +847,13 @@ body {
     main {
         display: flex;
         gap: 15px;
-        margin-top: 30px;
+        margin-top: 150px;
     }
 
     .leftCollumn {
         box-sizing: border-box;
-        width: 30%;
-        margin-left: 3%;
+        width: 60%;
+        margin-left: 4%;
         height: fit-content;
         display: flex;
         flex-direction: column;
@@ -585,13 +869,16 @@ body {
 
             .profile {
                 img {
+                    position: relative;
+                    margin-top: -110px;
                     border-radius: 20px;
-                    width: 150px;
-                    height: 150px;
+                    width: 200px;
+                    height: 200px;
+                    box-shadow: 10px 10px 37px 7px rgba(0, 0, 0, 0.2);
                 }
 
                 h1 {
-                    font-size: large;
+                    font-size: 30px;
                 }
 
                 span {
@@ -604,10 +891,11 @@ body {
                 }
 
                 ul {
+                    margin-top: 30px;
                     display: flex;
                     justify-content: center;
                     padding: 0;
-                    gap: 15px;
+                    gap: 30px;
                     list-style: none;
 
                     li {
@@ -621,7 +909,7 @@ body {
                             text-decoration: none;
 
                             i {
-                                font-size: medium;
+                                font-size: 25px;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
@@ -645,6 +933,7 @@ body {
 
                 .contactLine {
                     display: flex;
+                    align-items: center;
                     gap: 10px;
 
                     .contactIcon {
@@ -652,7 +941,8 @@ body {
                         height: 30px;
                         border-right: 1px solid black;
                         align-content: center;
-                        font-size: medium;
+                        font-size: 18px;
+                        padding: 0 6px;
                     }
 
                     .contactText {
@@ -660,12 +950,12 @@ body {
 
                         p {
                             margin: 0;
-                            font-size: small;
+                            font-size: medium;
                         }
 
                         h3 {
                             margin: 0;
-                            font-size: 11px;
+                            font-size: 12px;
                         }
                     }
                 }
@@ -675,17 +965,14 @@ body {
                 margin-top: 20px;
 
                 button {
-                    width: 150px;
-                    height: 40px;
+                    width: 170px;
+                    height: 55px;
                     border-radius: 10px;
                     background-color: rgb(50, 50, 50);
                     border: none;
                     font-weight: bold;
-
-                    a {
-                        text-decoration: none;
-                        color: white;
-                    }
+                    text-decoration: none;
+                    color: white;
                 }
             }
         }
@@ -698,7 +985,7 @@ body {
         flex-direction: column;
         background-color: white;
         border-radius: 20px;
-        margin-bottom: 50px;
+        margin-bottom: 80%;
         height: fit-content;
 
 
@@ -787,7 +1074,7 @@ body {
     .rightCollumn {
         width: fit-content;
         box-sizing: border-box;
-        margin-right: 3%;
+        margin-right: 4%;
         display: flex;
         background-color: white;
         border-radius: 20px;
@@ -813,7 +1100,7 @@ body {
                         text-align: center;
                         justify-content: center;
                         gap: 10px;
-                        width: 60px;
+                        width: 80px;
                         padding: 10px 0;
 
                         p {
@@ -822,7 +1109,7 @@ body {
                         }
 
                         i {
-                            font-size: 13px;
+                            font-size: 17px;
                         }
                     }
 
@@ -843,23 +1130,39 @@ body {
 }
 
 
-/* LAPTOPS (1440px - 1940px) */
-@media only screen and (min-width: 1441px) and (max-width: 1940px) {
+/* LAPTOPS (1440px +) */
+@media only screen and (min-width: 1440px) {
+
+    :root {
+        --background: #689689; 
+        --collumns: white;
+        --title: #504136;
+        --text: black;
+        --primary: #B2E6D4;
+        --secondary: ;
+        --terciary: ;
+        --hover: ;
+    }
+
+
+    body {
+        background-color: var(--background);
+    }
 
     main {
         display: flex;
         gap: 15px;
-        margin-top: 30px;
+        margin-top: 150px;
     }
 
     .leftCollumn {
         box-sizing: border-box;
-        width: 30%;
-        margin-left: 3%;
+        width: 50%;
+        margin-left: 6%;
         height: fit-content;
         display: flex;
         flex-direction: column;
-        background-color: white;
+        background-color: var(--collumns);
         border-radius: 20px;
         padding: 20px;
 
@@ -871,43 +1174,48 @@ body {
 
             .profile {
                 img {
+                    position: relative;
+                    margin-top: -110px;
                     border-radius: 20px;
-                    width: 150px;
-                    height: 150px;
+                    width: 200px;
+                    height: 200px;
+                    box-shadow: 10px 10px 37px 7px rgba(0, 0, 0, 0.2);
                 }
 
                 h1 {
-                    font-size: large;
+                    font-size: 35px;
+                    color: var(--background);
                 }
 
                 span {
-                    border: 1px solid grey;
-                    font-size: small;
+                    font-size: medium;
                     padding: 5px 10px;
                     border-radius: 10px;
-                    background-color: lightgrey;
+                    background-color: var(--primary);
+                    color: var(--text);
                     font-weight: bold;
                 }
 
                 ul {
+                    margin-top: 30px;
                     display: flex;
                     justify-content: center;
                     padding: 0;
-                    gap: 15px;
+                    gap: 25px;
                     list-style: none;
 
                     li {
-                        background-color: lightgray;
-                        padding: 5px;
+                        background-color: var(--primary);
+                        padding: 7px 8px;
                         border-radius: 5px;
                         text-align: center;
 
                         a {
-                            color: black;
+                            color: var(--text);
                             text-decoration: none;
 
                             i {
-                                font-size: medium;
+                                font-size: 25px;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
@@ -919,7 +1227,7 @@ body {
             }
 
             .contact {
-                background-color: lightgrey;
+                background-color: var(--primary);
                 border-radius: 20px;
                 padding: 10px;
                 width: 90%;
@@ -931,14 +1239,17 @@ body {
 
                 .contactLine {
                     display: flex;
+                    align-items: center;
                     gap: 10px;
 
                     .contactIcon {
                         width: 30px;
                         height: 30px;
-                        border-right: 1px solid black;
+                        border-right: 1px solid var(--text);
+                        padding: 0 10px;
                         align-content: center;
-                        font-size: medium;
+                        font-size: 20px;
+                        margin: 3px;
                     }
 
                     .contactText {
@@ -946,12 +1257,14 @@ body {
 
                         p {
                             margin: 0;
-                            font-size: small;
+                            font-size: medium;
+                            color: var(--text);
                         }
 
                         h3 {
                             margin: 0;
-                            font-size: 11px;
+                            font-size: 13px;
+                            color: var(--text);
                         }
                     }
                 }
@@ -961,17 +1274,15 @@ body {
                 margin-top: 20px;
 
                 button {
-                    width: 150px;
-                    height: 40px;
+                    width: 170px;
+                    height: 50px;
                     border-radius: 10px;
-                    background-color: rgb(50, 50, 50);
+                    background-color: var(--primary);
                     border: none;
                     font-weight: bold;
-
-                    a {
-                        text-decoration: none;
-                        color: white;
-                    }
+                    text-decoration: none;
+                    font-size: 14px;
+                    box-shadow: 10px 10px 37px 7px rgba(0, 0, 0, 0.2);
                 }
             }
         }
@@ -982,9 +1293,9 @@ body {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        background-color: white;
+        background-color: var(--collumns);
         border-radius: 20px;
-        margin-bottom: 50px;
+        margin-bottom: 50%;
         height: fit-content;
 
 
@@ -1000,6 +1311,7 @@ body {
 
                 h1,
                 h2 {
+                    color: var(--title);
                     font-size: large;
                     margin: 0;
                 }
@@ -1013,6 +1325,10 @@ body {
 
             .whatIDo {
 
+                h3 {
+                    color: var(--title);
+                }
+                
                 .grid {
                     margin: 0 20px;
                     display: grid;
@@ -1073,7 +1389,7 @@ body {
     .rightCollumn {
         width: fit-content;
         box-sizing: border-box;
-        margin-right: 3%;
+        margin-right: 6%;
         display: flex;
         background-color: white;
         border-radius: 20px;
@@ -1083,7 +1399,7 @@ body {
             box-sizing: border-box;
 
             .buttons {
-                padding: 10px;
+                padding: 25px 10px;
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
@@ -1099,8 +1415,9 @@ body {
                         text-align: center;
                         justify-content: center;
                         gap: 10px;
-                        width: 60px;
+                        width: 80px;
                         padding: 10px 0;
+
 
                         p {
                             margin: 0;
@@ -1108,7 +1425,7 @@ body {
                         }
 
                         i {
-                            font-size: 13px;
+                            font-size: 17px;
                         }
                     }
 
