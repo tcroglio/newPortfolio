@@ -7,11 +7,14 @@
     <title>Tiago Roglio | Portfólio </title>
     <link rel="stylesheet" href="css/style.css">
     <link href="fontawesome-free-6.5.2-web/css/all.css" rel="stylesheet">
-    <script src="script/script.js"></script>
+    <script src="script/tabs.js"></script>
+    <script src="script/carousel.js"></script>
 </head>
 
 <body>
     <main>
+
+        <!-- COLUNA DA ESQUERDA -->
         <div class="leftCollumn">
             <div class="leftCollumContent">
 
@@ -87,11 +90,18 @@
             </div>
         </div>
 
+
+        <!-- COLUNA CENTRAL -->
         <div class="centerCollumn" id="center">
             <div class="centerCollumnContent">
+
+                <!-- TAB 1 -->
                 <div class="tab-content" id="tab1">
                     <section class="about">
-                        <h1> SOBRE MIM </h1>
+                        <div class="titleAbout">
+                            <h1> Sobre Mim </h1>
+                            <img src="assets/linha.png" alt="">
+                        </div>
 
                         <p class="alignRight">
                             Olá! Meu nome é <b>Tiago</b> e sou um entusiasta da tecnologia apaixonado por
@@ -187,63 +197,54 @@
                     </section>
 
                     <section class="carousel-container">
-                        <!-- conteúdo aqui -->
                         <div class="carousel">
                             <div class="slides">
                                 <div class="slide">
-                                    <div>
-                                        <h1>
+                                    <div class="slide-content">
+                                        <p>
                                             slide 1
-                                        </h1>
-                                        <img src="assets/profile-formal-quadrado.jpeg" alt="" width="100px">
+                                        </p>
+                                        <img src="assets/em-desenvolvimento.png" alt="" width="150px" height="80px">
                                     </div>
                                 </div>
                                 <div class="slide">
-                                    <div>
-                                        <h1>
+                                    <div class="slide-content">
+                                        <p>
                                             slide 2
-                                        </h1>
-                                        <img src="assets/profile-formal-quadrado.jpeg" alt="" width="100px">
+                                        </p>
+                                        <img src="assets/em-desenvolvimento.png" alt="" width="150px" height="80px">
                                     </div>
                                 </div>
                                 <div class="slide">
-                                    <div>
-                                        <h1>
+                                    <div class="slide-content">
+                                        <p>
                                             slide 3
-                                        </h1>
-                                        <img src="assets/profile-formal-quadrado.jpeg" alt="" width="100px">
+                                        </p>
+                                        <img src="assets/em-desenvolvimento.png" alt="" width="150px" height="80px">
                                     </div>
                                 </div>
                                 <div class="slide">
-                                    <div>
-                                        <h1>
+                                    <div class="slide-content">
+                                        <p>
                                             slide 4
-                                        </h1>
-                                        <img src="assets/profile-formal-quadrado.jpeg" alt="" width="100px">
+                                        </p>
+                                        <img src="assets/em-desenvolvimento.png" alt="" width="150px" height="80px">
                                     </div>
                                 </div>
                                 <div class="slide">
-                                    <div>
-                                        <h1>
+                                    <div class="slide-content">
+                                        <p>
                                             slide 5
-                                        </h1>
-                                        <img src="assets/profile-formal-quadrado.jpeg" alt="" width="100px">
+                                        </p>
+                                        <img src="assets/em-desenvolvimento.png" alt="" width="150px" height="80px">
                                     </div>
                                 </div>
                                 <div class="slide">
-                                    <div>
-                                        <h1>
+                                    <div class="slide-content">
+                                        <p>
                                             slide 6
-                                        </h1>
-                                        <img src="assets/profile-formal-quadrado.jpeg" alt="" width="100px">
-                                    </div>
-                                </div>
-                                <div class="slide">
-                                    <div>
-                                        <h1>
-                                            slide 7
-                                        </h1>
-                                        <img src="assets/profile-formal-quadrado.jpeg" alt="" width="100px">
+                                        </p>
+                                        <img src="assets/em-desenvolvimento.png" alt="" width="150px" height="80px">
                                     </div>
                                 </div>
                             </div>
@@ -251,114 +252,61 @@
                         <button class="prev"><i class="fas fa-arrow-left"></i></button>
                         <button class="next"><i class="fas fa-arrow-right"></i></button>
                     </section>
-
-                    <style>
-                        .carousel-container {
-                            width: 700px;
-                            position: relative;
-                            z-index: 1;
-                        }
-
-                        .carousel {
-                            margin-right: 100px;
-                            position: relative;
-                            overflow: hidden;
-                            padding: 0 100px;
-                        }
-
-                        .slides {
-                            display: flex;
-                            transition: transform 0.5s ease;
-                            margin-bottom: 20px;
-                        }
-
-                        .slide {
-                            width: 50%;
-                            flex-shrink: 0;
-                        }
-
-                        .prev,
-                        .next {
-                            position: absolute;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            height: 100px;
-                            background-color: #333;
-                            color: #fff;
-                            border: none;
-                            padding: 10px;
-                            cursor: pointer;
-                            opacity: 50%;
-                        }
-
-                        .prev {
-                            left: 10px;
-                        }
-
-                        .next {
-                            right: 10px;
-                        }
-                    </style>
-
-                    <script>
-                        const slides = document.querySelector('.slides');
-                        const prevBtn = document.querySelector('.prev');
-                        const nextBtn = document.querySelector('.next');
-
-                        let slideIndex = 0;
-
-                        nextBtn.addEventListener('click', () => {
-                            slideIndex++;
-                            showSlides();
-                        });
-
-                        prevBtn.addEventListener('click', () => {
-                            slideIndex--;
-                            showSlides();
-                        });
-
-                        function showSlides() {
-                            // Calcula a largura total dos slides, incluindo margens
-                            const slidesWidth = document.querySelector('.slide').offsetWidth;
-                            const totalSlides = document.querySelectorAll('.slide').length;
-
-                            // Calcula a largura total ocupada por dois slides, incluindo margens
-                            const twoSlidesWidth = slidesWidth * 2;
-
-                            // Define a posição do slide para garantir que apenas dois slides sejam visíveis por vez
-                            let position = -(slidesWidth * slideIndex);
-                            if (slideIndex >= totalSlides - 2) {
-                                position = -(slidesWidth * (totalSlides - 2));
-                            }
-
-                            slides.style.transition = 'transform 0.5s ease';
-                            slides.style.transform = `translateX(${position}px)`;
-                        }
-                    </script>
                 </div>
 
 
+                <!-- TAB 2 -->
                 <div class="tab-content" id="tab2">
-                    <!-- Content da segunda aba, com as sections e tudo mais -->
                     <section class="resumo">
-                        <h1>RESUMO</h1>
-                        <h2 class="alignRight">Adicionar texto aqui</h2>
-                        <p class="alignRight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ab,
-                            illum
-                            natus cumque
-                            molestiae quos nam id sint impedit voluptate fugiat a corporis. A, dolore! Unde amet et
-                            dolorem
-                            accusantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus atque
-                            necessitatibus porro reprehenderit dignissimos veritatis nemo consequatur, autem illum ea
-                            expedita quidem culpa dolore beatae quae adipisci, temporibus debitis nihil!</p>
+                        <div class="titleResumo">
+                            <h1>Resumo</h1>
+                            <img src="assets/linha.png" alt="">
+                        </div>
+
+                        <div class="education-exp">
+                            <div class="education">
+                                <div class="educationTitle">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <h3>education</h3>
+                                </div>
+
+                                <ul>
+                                    <li>sao lucas</li>
+                                    <li>ruben dario</li>
+                                    <li>other</li>
+                                </ul>
+                            </div>
+
+                            <div class="exp">
+                                <div class="expTitle">
+                                    <i class="fas fa-suitcase"></i>
+                                    <h3>Experience</h3>
+                                </div>
+
+                                <ul>
+                                    <li>syscar</li>
+                                    <li>smed</li>
+                                    <li>other</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+
+
+
                     </section>
                 </div>
-
             </div>
         </div>
 
+
+        <!-- COLUNA DA DIREITA -->
         <div class="rightCollumn">
             <div class="rightCollumnContent">
+
+                <!-- BOTÕES -->
                 <div class="buttons">
 
                     <a href="#center" class="tab-link" data-tab="tab1">
@@ -385,7 +333,6 @@
                             <p>Contato</p>
                         </div>
                     </a>
-
                 </div>
             </div>
 
@@ -397,6 +344,20 @@
     <footer>
 
     </footer>
+
+    <script>
+        // Adiciona um ouvinte de evento ao carregar a página
+        window.addEventListener("load", scrollToTop);
+
+        // Função para rolar a página para o topo
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+    </script>
 </body>
 
 </html>

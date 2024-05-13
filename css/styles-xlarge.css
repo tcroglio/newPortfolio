@@ -153,14 +153,24 @@
             padding: 20px;
 
             #tab1 {
+
                 .about {
                     text-align: justify;
 
-                    h1 {
-                        text-align: center;
-                        color: var(--title);
-                        font-size: large;
-                        margin: 0 0 10px 0;
+                    .titleAbout {
+                        display: flex;
+                        align-items: center;
+                        gap: 30px;
+
+                        h1 {
+                            color: var(--title);
+                            font-size: 30px;
+                        }
+
+                        img {
+                            height: 6px;
+                            width: 300px;
+                        }
                     }
 
                     h2 {
@@ -245,18 +255,139 @@
                         }
                     }
                 }
-            }
 
-            #tab2 {
-                h1 {
+                .slide-content {
+                    border-radius: 10%;
+                    padding: 10px;
+                    background-color: var(--primary);
+
+                    img {
+                        border-radius: 10%;
+                    }
+                }
+
+                .carousel-container {
+                    width: 700px;
+                    position: relative;
+                    z-index: 1;
+                    display: flex;
+                    align-items: center;
+                    margin: 0 auto;
+                }
+
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    padding: 0 100px;
+                }
+
+                .slides {
+                    display: flex;
+                    transition: transform 0.5s ease;
+                    margin-bottom: 10px;
+                }
+
+                .slide {
+                    width: 50%;
+                    flex-shrink: 0;
+                    display: flex;
+                    justify-content: center;
                     text-align: center;
                 }
 
-                h1,
-                h2 {
-                    color: var(--title);
-                    font-size: large;
-                    margin: 0;
+                .prev,
+                .next {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 100px;
+                    background-color: #333;
+                    color: #fff;
+                    border: none;
+                    padding: 10px;
+                    cursor: pointer;
+                    opacity: 50%;
+                }
+
+                .prev {
+                    left: 10px;
+                }
+
+                .next {
+                    right: 10px;
+                }
+            }
+
+            #tab2 {
+                .resumo {
+
+                    .titleResumo {
+                        display: flex;
+                        align-items: center;
+                        gap: 30px;
+
+                        h1 {
+                            color: var(--title);
+                            font-size: 30px;
+                        }
+
+                        img {
+                            height: 6px;
+                            width: 300px;
+                        }
+
+                    }
+
+                    h2 {
+                        color: var(--title);
+                        font-size: large;
+                        margin: 0;
+                    }
+
+                    .education-exp {
+                        border: 1px solid blue;
+                        display: flex;
+                        gap: 100px;
+
+                        .education {
+                            border: 1px solid black;
+                            display: flex;
+                            flex-direction: column;
+
+
+                            .educationTitle {
+                                border: 1px solid red;
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            }
+
+                            /* ul {
+                                li {
+
+                                }
+                            } */
+                        }
+
+                        .exp {
+                            border: 1px solid black;
+                            display: flex;
+                            flex-direction: column;
+
+                            .expTitle {
+                                border: 1px solid red;
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            }
+
+                            /* ul {
+                                li {
+
+                                }
+                            } */
+                        }
+                    }
                 }
             }
         }
@@ -308,8 +439,8 @@
                     }
 
                     .botao:hover {
-                        background-color: black;
-                        color: white;
+                        background-color: var(--collumns);
+                        color: var(--text);
                         border-radius: 10px;
                         transition: 0.5s;
                     }

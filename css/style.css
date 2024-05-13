@@ -42,7 +42,8 @@ body {
 }
 
 #downloadCV:hover {
-    color: white;
-    background-color: black;
+    color: var(--text);
+    border: 1px solid var(--text);
+    background-color: var(--collumns);
     transition: 0.5s;
 }
