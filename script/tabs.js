@@ -22,5 +22,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    tabLinks[1].click();
+    tabLinks[0].click();
 });
