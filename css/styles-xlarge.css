@@ -173,17 +173,21 @@
                         }
                     }
 
-                    h2 {
-                        color: var(--title);
-                        font-size: large;
-                        margin: 0;
-                    }
+                    .textAbout {
+                        padding: 0 25px;
 
-                    p {
-                        font-size: small;
-                        /* top right bottom left */
-                        margin: 0 0 10px 0;
-                        color: var(--text);
+                        h2 {
+                            color: var(--title);
+                            font-size: large;
+                            margin: 0;
+                        }
+
+                        p {
+                            font-size: small;
+                            /* top right bottom left */
+                            margin: 0 0 10px 0;
+                            color: var(--text);
+                        }
                     }
                 }
 
@@ -206,6 +210,7 @@
                             display: flex;
                             padding: 10px;
                             gap: 10px;
+                            border: 1px solid blue;
 
                             .gridIcon {
                                 text-align: center;
@@ -218,6 +223,7 @@
                             }
 
                             .gridText {
+                                padding-right: 30px;
                                 h1 {
                                     margin-top: 0;
                                     font-size: small;
@@ -273,6 +279,7 @@
                     display: flex;
                     align-items: center;
                     margin: 0 auto;
+                    padding-top: 20px;
                 }
 
                 .carousel {
@@ -345,47 +352,118 @@
                     }
 
                     .education-exp {
-                        border: 1px solid blue;
                         display: flex;
-                        gap: 100px;
+                        justify-content: center;
+                        gap: 30px;
 
+                        /* EDUCATION HERE */
                         .education {
-                            border: 1px solid black;
                             display: flex;
                             flex-direction: column;
 
-
                             .educationTitle {
-                                border: 1px solid red;
                                 display: flex;
                                 align-items: center;
                                 gap: 10px;
+                                margin: 0;
+                                padding: 0;
+
+                                i {
+                                    margin-left: 4px;
+                                }
+
+                                h2 {
+                                    margin: 10px 0;
+                                }
                             }
 
-                            /* ul {
-                                li {
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                margin: 0;
+                                padding: 0;
 
+                                li {
+                                    border: 1px solid blue;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    list-style: none;
+                                    width: 320px;
+                                    height: 100px;
+                                    border-radius: 10px;
+                                    /* top right bottom left */
+                                    padding: 5px 0 5px 10px;
+
+                                    p,
+                                    h2 {
+                                        margin: 0;
+                                    }
+
+                                    .small {
+                                        font-size: small;
+                                        font-weight: bold;
+                                        color: grey;
+                                        opacity: 80%;
+                                    }
                                 }
-                            } */
+                            }
                         }
 
+                        /* EXPERIENCE HERE */
                         .exp {
-                            border: 1px solid black;
                             display: flex;
                             flex-direction: column;
 
                             .expTitle {
-                                border: 1px solid red;
                                 display: flex;
                                 align-items: center;
                                 gap: 10px;
+                                margin: 0;
+                                padding: 0;
+
+                                i {
+                                    margin-left: 4px;
+                                }
+
+                                h2 {
+                                    margin: 10px 0;
+                                }
                             }
 
-                            /* ul {
-                                li {
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                margin: 0;
+                                padding: 0;
 
+                                li {
+                                    border: 1px solid blue;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    list-style: none;
+                                    width: 320px;
+                                    height: 100px;
+                                    border-radius: 10px;
+                                    /* top right bottom left */
+                                    padding: 5px 0 5px 10px;
+
+                                    p,
+                                    h2 {
+                                        margin: 0;
+                                    }
+
+                                    .small {
+                                        font-size: small;
+                                        font-weight: bold;
+                                        color: grey;
+                                        opacity: 80%;
+                                    }
                                 }
-                            } */
+                            }
                         }
                     }
                 }
